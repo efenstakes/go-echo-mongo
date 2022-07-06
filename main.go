@@ -26,9 +26,9 @@ func main() {
 	// server.GET("/", func(ctx echo.Context) error {
 	// 	ctx.JSON(http.StatusOK, { "running": true, "dev": "efen" })
 	// })
-	server.POST("/book", controllers.Create)
-	server.GET("/book/:id", controllers.Get)
-	server.GET("/book", controllers.GetAll)
+	server.POST("/todo", controllers.Create)
+	server.GET("/todo/:id", controllers.Get)
+	server.GET("/todo", controllers.GetAll)
 
 	if err := server.Start(":1234"); err != nil {
 		fmt.Println("Error running server")
